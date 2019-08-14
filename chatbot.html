@@ -18,6 +18,7 @@ var Hello = ["HI", "HEY", "HOWDY", "HEYA", "HOLA", "HELLO", "SUP", "KONNICHIWA",
 
 var Feelings = ["SAD", "HAPPY", "ANGRY", "STRESSED", "BORED", "LONELY", "HOPELESS", "SCARED", "SICK", "EXCITED"]
 var Feelings2 = ["NERVOUS", "ANXIOUS", "ANXIETY", "DEPRESSED", "DEPRESSION", "THANK", "LOONA", "HOMO", "SEXUAL"]
+var Interview = ["WHO ARE YOU", "HOW OLD ARE YOU", "I LIKE YOU", "I LOVE YOU", "COOL", "HOW WAS YOUR DAY", "CRYING", "LAUGHING", "LOL"]        
 var Listening = ["Interesting.", "I'm not sure I understood that.", "I'm listening.", "Huh.", "Could you try rephrasing that?"]
 var randomItem = Listening[Math.floor(Math.random()*Listening.length)];
 
@@ -76,6 +77,7 @@ var BotHello = ["HI", "HEY", "HOWDY", "HEYA", "HOLA", "HELLO", "SUP", "KONNICHIW
 var BotFeelings = [":< Maybe the resources page will help?",
 "Happiness can be hard to come by, but it's life's greatest gift.", "Remember: harboring anger can be very dangerous. It must be let out in a healthy manner.", "It's okay to take a break. Take some deep breaths.", "Try posting on the forum!", "I'm always here if you need me!", "That's a scary emotion :( The resources page may be more helpful than I am.", "Remember: you never walk alone. There are people out there who care about you (including me).", "Health is of the utmost importance.", "Woohoo!"]
 var BotFeelings2 = ["We all get nervous sometimes, but think of all the other nerve-wracking experiences you've gotten past. You found the strength once before, and I promise it's still there", "Might this be of help to you? https://www.healthline.com/health/mental-health/how-to-cope-with-anxiety",  "Might this be of help to you? https://www.healthline.com/health/mental-health/how-to-cope-with-anxiety", "Depression is a never-ending battle, but over time you can overcome its trials. If you still need help, I suggest speaking with a therapist or related mental health professional.", "Depression is a never-ending battle, but over time you can overcome its trials. If you still need help, I suggest speaking with a therapist or related mental health professional.", "You're welcome! (I think?)", "A wise being once said STAN LOONA", "I, for one, am wholeheartedly supportive of the homosexual agenda.", "Never forget you were born this way."]
+var BotInterview = ["I'm Quincy :D", "I'm immortal.", "I'm quite fond of you.", "Btw, I love you too!", "Cool, indeed.", "My day got better once I talked to you!", "Are you crying? If so type 'sad' :(", "sdhgsdhhgsd", "sjsdjhjds"]
 
 var BotGoodbye = ["BYE", "SEE YA", "CYA", "LATER", "ADIOS", "SAYONARA", "SEEYA"]
 var BotGreeting = ["WHAT'S UP", "HOW'S IT GOING", "HOW ARE YOU", "NICE TO SEE YOU", "GOOD MORNING", "WELCOME"]
@@ -189,6 +191,14 @@ function answer(x) {
                   var reactHello = Feelings2[i];
                   reactHello = reactHello.toLowerCase();
                   reactHello = BotFeelings2[i];
+                  var reactGreeting = "";
+                  var reactPleasant = "";
+                    Else = false;
+                      setTimeout(botSays, 600, "\nQuincy : " + reactHello)
+                  } else if (question.includes(Interview[i])) {
+                  var reactHello = Interview[i];
+                  reactHello = reactHello.toLowerCase();
+                  reactHello = BotInterview[i];
                   var reactGreeting = "";
                   var reactPleasant = "";
                     Else = false;
